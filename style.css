@@ -124,7 +124,7 @@ background-repeat: no-repeat;
     width: 100%; 
 
     display: grid;
-    grid-template-columns: 26% 30% 15% 10% 5% 35%; 
+    grid-template-columns: 26% 30% 15% 10% 5% 5%; 
    
 }
 
