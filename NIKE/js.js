@@ -392,3 +392,22 @@ function incrementarProducto(index) {
 
 // Renderizar el carrito inicialmente
 renderCarrito();
+
+
+
+document.getElementById('pago7button').addEventListener('click', function () {
+
+    localStorage.removeItem('carrito');
+
+
+    const contenedor = document.getElementById('contenedor-productos');
+    contenedor.innerHTML = '';
+
+
+    const totalElemento = document.querySelector('.pago6_2');
+    const totalElemento2 = document.querySelector('.pago3_2');
+    totalElemento.textContent = '0 €';
+    totalElemento2.textContent = '0 €';
+
+
+});
