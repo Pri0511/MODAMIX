@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgba(54, 54, 54, 0.411);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor{
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    min-height: 630px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 5% 15% 5% 75%;
+    
+
+}
+
+.parte1{
+    position: relative;
+    width: 100%; 
+
+    display: grid;
+    grid-template-columns: 30% 15% 25% 25%; 
+    background-color: rgb(230, 226, 226);
+}
+
+.parte1_1 h1 {  
+    font-size: 0.7rem;
+    margin-top: 2.5%;
+    margin-left: 53%;
+    color: rgb(71, 69, 69);;
+    
+}
+.parte1_1 h1:hover {
+    text-decoration: underline;
+}
+
+.parte1_1 {  
+background-image: url(resources/enviado.png);
+background-size: 20px;
+background-position: 50% 45%;
+background-repeat: no-repeat;
+}
+
+
+.parte1_2 h1 {  
+    font-size: 0.7rem;
+    margin-top: 4.5%;
+    margin-left: 17%;
+    color: rgb(71, 69, 69);;
+    
+}
+.parte1_2 h1:hover {
+    text-decoration: underline;
+}
+
+.parte1_2 {  
+background-image: url(resources/cargando-flechas.png);
+background-size: 10px;
+background-position: 10% 45%;
+background-repeat: no-repeat;
+}
+
+.parte1_3 h1 {  
+    font-size: 0.7rem;
+    margin-top: 3%;
+    margin-left: 12%;
+    color: rgb(71, 69, 69);;
+    
+}
+.parte1_3 h1:hover {
+    text-decoration: underline;
+}
+
+.parte1_3 {  
+    background-image: url(resources/enviado.png);
+    background-size: 20px;
+    background-position: 5% 45%;
+    background-repeat: no-repeat;
+}
+
+.parte1_4 button {  
+    font-size: 0.7rem;
+    margin-top: 0.5%;
+    margin-left: 12%;
+    color: rgb(71, 69, 69);
+    width: 40%;
+    height: 85%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius:6px;
+    
+    text-align: right; 
+    padding-right: 10px; 
+    background-color:rgb(110, 110, 247) ;
+    color: white;
+    border: none; 
+}
+.parte1_4 button:hover {
+    text-decoration: underline;
+}
+
+.parte1_4 button{  
+    background-image: url(resources/auriculares.png);
+    background-size: 20px;
+    background-position: 8% 45%;
+    background-repeat: no-repeat;
+}
+
+
+.parte2{
+    position: relative;
+    width: 100%; 
+
+    display: grid;
+    grid-template-columns: 26% 30% 15% 10% 5% 35%; 
+   
+}
+
+
+.parte2_1 button {  
+    font-size: 1.5rem;
+    margin-top: 7%;
+    margin-left: 50%;
+    color: rgb(71, 69, 69);
+    width: 35%;
+    height: 45%;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius:40px;
+    
+    text-align: right; 
+    padding-right: 10px; 
+    background-color:rgb(15, 15, 15) ;
+    color: white;
+    border: none; 
+}
+.parte2_2 {
+    display: grid;
+    grid-template-columns: 85% 15%
+}
+
+.parte2_2 input{  
+    font-size: 0.7rem;
+ 
+    color: rgb(71, 69, 69);
+    width: 90%;
+    height: 30%;
+    padding: 7px;
+    
+    text-align: left; 
+    padding-right: 0px; 
+    background-color:rgb(230, 226, 226);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(141, 138, 138);
+
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: -20%;
+}
+.parte2_2 button{  
+    
+
+    background-image: url(resources/buscar.png);
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    width: 50%;
+    height:31%;
+    padding: 7px;    
+
+    background-color:rgb(170, 121, 121);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(141, 138, 138);
+
+    margin-top: 34px;
+    margin-bottom: 20%;
+    margin-left: -23px;
+}
+
+
+.parte2_3 h1 {  
+    font-size: 0.9rem;
+    margin-top: 15%;
+    margin-left: 15%;
+    color: rgb(71, 69, 69);;
+    text-decoration: underline;
+}
+
+.parte2_4 h1 {  
+    font-size: 0.9rem;
+    margin-top: 25%;
+    margin-left: 15%;
+    color: rgb(71, 69, 69);;
+   
+}
+
+
+.parte2_4 h1:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+.parte2_5 {
+    margin-top: 15px;
+    margin-left: -4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 45%;
+
+    background-image: url(resources/corazon.png);
+    background-size: 22px;
+    background-position: 45% 100%;
+    background-repeat: no-repeat;
+
+    border: 2px solid white; 
+    background-color: #ffffff; 
+    transition: background-color 0.01s ;
+
+
+}
+.parte2_6 {
+    margin-top: 15px;
+    margin-left: -28px;
+    width: 40px;
+    height: 40px;
+    border-radius: 45%;
+
+    background-image: url(resources/carrito-de-compras.png);
+    background-size: 22px;
+    background-position: 40% 100%;
+    background-repeat: no-repeat;
+
+    border: 2px solid white; 
+    background-color: #ffffff; 
+    transition: background-color 0.01s ;
+
+
+}
+.parte3{
+    border: none;
+    border-top: 1px solid rgb(168, 164, 164);
+    border-bottom: 1px solid rgb(168, 164, 164);
+}
+
+.parte3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+}
+
+
+.parte3_1 h1{
+    font-size: 0.7rem;
+    margin-top: 5%;
+    margin-left: 50%;
+    color: rgb(71, 69, 69);;
+}
+.parte3_2 h1{
+    font-size: 0.7rem;
+    margin-top: 5%;
+    margin-left: 55%;
+    color: rgb(71, 69, 69);;
+}
+.parte3_3 h1{
+    font-size: 0.7rem;
+    margin-top: 5%;
+    margin-left: 45%;
+    color: rgb(71, 69, 69);;
+}
+.parte3_4 h1{
+    font-size: 0.7rem;
+    margin-top: 5%;
+    margin-left: 40%;
+    color: rgb(231, 127, 57);;
+}
+.parte3_5 h1{
+    font-size: 0.7rem;
+    margin-top: 5%;
+    margin-left: 30%;
+    color: rgb(71, 69, 69);;
+}
+.parte3_6 h1{
+    font-size: 0.7rem;
+    margin-top: 5%;
+    margin-left: 10%;
+    color: rgb(71, 69, 69);;
+}
+.parte3_7 h1{
+ 
+        font-size: 0.7rem;
+        margin-top: 5%;
+        margin-left: 1%;
+        color: rgb(71, 69, 69);;
+       
+    }
+    
+    
+.parte4{
+    position: relative;
+    width: 100%;
+
+
+    background-image: url(resources/Captura\ de\ pantalla\ 2024-09-30\ 171408.png);
+    background-size: 100%;
+    background-position: 40% 50%;
+    background-repeat: no-repeat;
+}
