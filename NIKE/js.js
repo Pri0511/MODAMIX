@@ -4,111 +4,111 @@ document.addEventListener("DOMContentLoaded", function () {
     const productos = [
         {
             imagen: '1.png',
-            loUltimo: 'Lo último',
-            nombre: 'Nike 1',
+            loUltimo: 'Materiales sostenibles',
+            nombre: 'Nike Air Max TW',
             descripcion: 'Zapatillas - Hombre',
             colores: '3 colores',
-            precio: '149,99 €',
-            precio1: 149.99
+            precio: '103,99 €',
+            precio1: 103.99
         },
         {
             imagen: '2.png',
             loUltimo: 'Lo último',
-            nombre: 'Nike 2',
+            nombre: 'Nike Air Max Plus 3',
             descripcion: 'Zapatillas - Hombre',
             colores: '3 colores',
-            precio: '149,99 €',
-            precio1: 120.99
+            precio: '132,99 € €',
+            precio1: 132.99
         },
         {
             imagen: '3.png',
             loUltimo: 'Lo último',
-            nombre: 'Nike 3',
+            nombre: 'Nike Air Force 1 Jewel',
             descripcion: 'Zapatillas - Hombre',
             colores: '3 colores',
-            precio: '149,99 €',
-            precio1: 120.99
+            precio: '90,99 €',
+            precio1: 90.99
         },
         {
             imagen: '4.png',
             loUltimo: 'Lo último',
-            nombre: 'Nike 4',
+            nombre: 'Nike P-6000 Premium',
             descripcion: 'Zapatillas - Hombre',
             colores: '3 colores',
-            precio: '149,99 €',
-            precio1: 120.99
+            precio: '119,99 €',
+            precio1: 119.99
         },
         {
             imagen: '5.png',
             loUltimo: 'Lo último',
-            nombre: 'Nike 5',
+            nombre: 'Nike React Vision',
             descripcion: 'Zapatillas - Hombre',
             colores: '3 colores',
-            precio: '149,99 €',
-            precio1: 120.99
+            precio: '139,99 €',
+            precio1: 139.99
         },
         {
             imagen: '6.png',
             loUltimo: 'Lo último',
-            nombre: 'Nike 6',
+            nombre: 'Nike Air Max Plus Drift',
             descripcion: 'Zapatillas - Hombre',
             colores: '3 colores',
-            precio: '149,99 €',
-            precio1: 120.99
+            precio: '129,99 €',
+            precio1: 129.99
         },
         {
             imagen: '7.png',
             loUltimo: 'Lo último',
-            nombre: 'Nike 7',
+            nombre: 'Nike Air Max Solo',
             descripcion: 'Zapatillas - Hombre',
             colores: '3 colores',
-            precio: '120,99 €',
-            precio1: 120.99
+            precio: '65,99 €',
+            precio1: 65.99
         },
         {
             imagen: '8.png',
             loUltimo: 'Lo último',
-            nombre: 'Nike 8',
-            descripcion: 'Zapatillas - Hombre',
+            nombre: 'Nike Shox TL',
+            descripcion: 'Zapatillas',
             colores: '3 colores',
-            precio: '130,9 €',
-            precio1: 130.99
+            precio: '169,99 €',
+            precio1: 169.99
         },
         {
             imagen: '9.png',
-            loUltimo: 'Lo último',
-            nombre: 'Nike 9',
+            loUltimo: 'Producto para Members',
+            nombre: 'Nike Dunk Low',
             descripcion: 'Zapatillas - Hombre',
             colores: '3 colores',
-            precio: '149,99 €',
-            precio1: 120.99
+            precio: '90,99 €',
+            precio1: 90.99
         },
         {
             imagen: '10.png',
-            loUltimo: 'Lo último',
-            nombre: 'Nike 10',
+            loUltimo: 'Materiales sostenibles',
+            nombre: 'Nike Dunk Low',
             descripcion: 'Zapatillas - Hombre',
             colores: '3 colores',
-            precio: '149,99 €',
-            precio1: 120.99
+            precio: '90,99 €',
+            precio1: 90.99
         },
         {
             imagen: '11.png',
             loUltimo: 'Lo último',
-            nombre: 'Nike 11',
+            nombre: 'Nike Dunk Low',
             descripcion: 'Zapatillas - Hombre',
             colores: '3 colores',
-            precio: '149,99 €',
-            precio1: 120.99
+            precio: '90,99 €',
+            precio1: 90.99
         },
         {
             imagen: '12.png',
-            loUltimo: 'Lo último',
-            nombre: 'Nike 12',
-            descripcion: 'Zapatillas - Hombre',
+            loUltimo: 'Materiales sostenibles',
+            nombre: 'Nike Juniper Trail 3',
+            descripcion: 'Zapatillas de trail running - Hombre',
             colores: '3 colores',
-            precio: '149,99 €',
-            precio1: 120.99
+            precio: '89,99 €',
+            precio1: 89.99
         },
         
     ];
@@ -255,22 +255,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 num: 1
             };
 
-           
+            // Obtener el carrito desde localStorage
             let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
             const productoExistente = carrito.find(p => p.nombre === productoCarrito.nombre && p.talla === productoCarrito.talla);
 
             if (productoExistente) {
-             
+                // Si el producto ya existe, solo incrementar la cantidad
                 productoExistente.num += 1;
             } else {
-             
+                // Si no existe, añadir el nuevo producto al carrito
                 carrito.push(productoCarrito);
             }
 
-       
+            // Actualizar el carrito en localStorage
             localStorage.setItem('carrito', JSON.stringify(carrito));
 
-
+            // Renderizar el carrito
             renderCarrito();
         }
     });
@@ -278,27 +278,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function renderCarrito() {
     const contenedor = document.getElementById('contenedor-productos');
-    const totalElemento = document.querySelector('.pago6_2'); 
+    const totalElemento = document.querySelector('.pago6_2'); // Elemento para mostrar el total
     const totalElemento2 = document.querySelector('.pago3_2'); 
-
+    // Obtener el carrito desde localStorage
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-
+    // Limpiar el contenedor antes de agregar nuevos productos
     contenedor.innerHTML = '';
 
-    let total = 0;
+    let total = 0; // Variable para almacenar el total
 
     if (carrito.length === 0) {
         contenedor.innerHTML = "<p>El carrito está vacío</p>";
         totalElemento.textContent = '0 €';
-        totalElemento2.textContent = '0 €'; 
+        totalElemento2.textContent = '0 €'; // Mostrar total cuando el carrito está vacío
     } else {
         carrito.forEach((producto, index) => {
-           
+            // Crear el contenedor del producto
             const productoDiv = document.createElement('div');
             productoDiv.className = 'contenedor_parte4';
 
-         
+            // Añadir el contenido al contenedor del producto
             productoDiv.innerHTML = `
                 <div class="contenedor_parte4_1">
                     <div class="contenedor_parte4_1_1" style="background-image: url('${producto.imagen}');"></div>
@@ -324,17 +324,17 @@ function renderCarrito() {
                 </div>
             `;
 
-        
+            // Agregar el contenedor del producto al contenedor principal
             contenedor.appendChild(productoDiv);
 
-        
+            // Calcular el total
             total += producto.precio1 * producto.num;
         });
 
-       
-        totalElemento.textContent = `${total.toFixed(2)} €`; 
+        // Mostrar el total
+        totalElemento.textContent = `${total.toFixed(2)} €`; // Asegúrate de mostrar el total con 2 decimales
         totalElemento2.textContent = `${total.toFixed(2)} €`;
-  
+        // Agregar eventos de eliminación a los botones
         document.querySelectorAll('.sumas1').forEach(button => {
             button.addEventListener('click', function () {
                 const index = this.getAttribute('data-index');
@@ -342,7 +342,7 @@ function renderCarrito() {
             });
         });
 
-    
+        // Agregar eventos de incremento a los botones
         document.querySelectorAll('.sumas3').forEach(button => {
             button.addEventListener('click', function () {
                 const index = this.getAttribute('data-index');
@@ -353,57 +353,42 @@ function renderCarrito() {
 }
 
 function restarProducto(index) {
- 
+    // Obtener el carrito desde localStorage
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
     if (carrito[index]) {
-
+        // Restar 1 a la cantidad del producto
         carrito[index].num -= 1;
 
-
+        // Si la cantidad llega a 0, eliminar el producto del carrito
         if (carrito[index].num <= 0) {
             carrito.splice(index, 1);
         }
 
+        // Actualizar el carrito en localStorage
         localStorage.setItem('carrito', JSON.stringify(carrito));
 
-      
+        // Volver a renderizar el carrito
         renderCarrito();
     }
 }
 
 function incrementarProducto(index) {
-
+    // Obtener el carrito desde localStorage
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
     if (carrito[index]) {
-
+        // Incrementar 1 a la cantidad del producto
         carrito[index].num += 1;
 
-
+        // Actualizar el carrito en localStorage
         localStorage.setItem('carrito', JSON.stringify(carrito));
      
         
-
+        // Volver a renderizar el carrito
         renderCarrito();
     }
 }
 
+// Renderizar el carrito inicialmente
 renderCarrito();
-
-document.getElementById('pago7button').addEventListener('click', function () {
-
-    localStorage.removeItem('carrito');
-
-
-    const contenedor = document.getElementById('contenedor-productos');
-    contenedor.innerHTML = '';
-
-
-    const totalElemento = document.querySelector('.pago6_2');
-    const totalElemento2 = document.querySelector('.pago3_2');
-    totalElemento.textContent = '0 €';
-    totalElemento2.textContent = '0 €';
-
-
-});
